@@ -1,0 +1,365 @@
+:root{
+  --color1: #1137b1;
+  --color2: #e0f1ff;
+  --color3: #c7fceb;
+  --color4: #6bbaa3;
+  --color5: #5dbfc9;
+  --color6: #e5a4ae;
+  --color7: #2c2b2cac;
+  --titrekely: #6ac1c9;
+  --shadow: #dfe2df;
+  --dimProfile: 45px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  transition: .3s;
+}
+
+#root{
+ display: grid;
+ grid-template-columns: .01fr .15fr .7fr 1fr 1fr;
+ grid-template-rows: .01fr .8fr 1fr .2fr 1fr 1fr 1fr .01fr;
+ grid-template-areas: 
+  '. . . . .'
+  '. logo card . .'
+  '. nav card . .'
+  '. nav soratr . .'
+  '. nav medoc . .'
+  '. nav medoc . .'
+  '. nav medoc . .'
+  '. . . . .';
+  gap: 5px 15px;
+  width: 99vw;
+  height: 100vh;
+}
+
+
+.logo{
+  grid-area: logo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo p{
+  background: var(--color3);
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2.7rem;
+  color: red;
+}
+
+nav{
+  grid-area: nav;
+  background: var(--color3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-radius: 30px;
+}
+
+nav ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 65%;
+}
+
+nav a{
+  color: #2c2b2c;
+  font-size: 1.2rem;
+}
+
+nav .ambany{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 25%;
+}
+
+nav .ambany p{
+  background: url(../img/user.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: var(--dimProfile);
+  height: var(--dimProfile);
+  border-radius: 50%;
+}
+
+/*********Carte Patient ****************/
+.card{
+  grid-area: card;
+  border-radius: 10px;
+  background: whitesmoke;
+  margin-top: 40px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Le sariny patient */
+.card .user{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 1px 0 20px var(--shadow);
+  background: url(../img/user.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: -25%;
+  left: 35%;  
+}
+
+
+.card .nom{
+  margin-top: 1rem;
+}
+
+/* Age et ville patient */
+.card .about{
+  font-weight: 100;
+  color: var(--color7);
+}
+
+/* Infos patient */
+.card .info{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: translateY(20px);
+}
+
+/* Titre Kely (sang, longueur, poids) */
+.card .info div p:nth-child(1){
+  font-size: 10px;
+  font-weight: 600;
+  color: #2c2b2c;
+}
+
+.card .info div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .info div p:nth-child(2){
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+
+/* Ovaina le couleur anle sang ao am carte */
+.card .blood p, 
+.card .blood p:nth-child(1){
+  color: #af0101 !important;
+}
+
+
+/********Soratra Medic..... *********/
+.prescr{
+  grid-area: soratr;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-left: 1.2rem;
+  color: var(--color5);
+}
+
+
+/****************Médicament sy docteur***********************/
+.medoc{
+  grid-area: medoc;
+  width: 290px;
+  background: whitesmoke;
+  border-radius: 10px;
+  margin-left: 15px;
+  padding: 10px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.medoc .scroll{
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 25px;
+  height: 30%;
+  margin-bottom: 1.5em;
+}
+
+.medoc .scroll > div{
+  padding-bottom: 25px;
+  position: relative;
+  margin-right: 30px;
+  animation: scrollingEffect infinite linear 10s;
+}
+
+
+/* Animation Scroll */
+@keyframes scrollingEffect {
+  0%{
+    transform: translateY(0);
+  }
+  23%{
+    transform: translateY(5px);
+  }
+  33%{
+    transform: translateY(-105px);
+  }
+  56%{
+    transform: translateY(-100px);
+  }
+  66%{
+    transform: translateY(-205px);
+  }
+  90%{
+    transform: translateY(-200px);
+  }
+  100%{
+    transform: translateY(-305px);
+  }
+}
+
+/* Tsipika fotsy io ambaninle scroll io */
+.medoc .scroll::after{
+  content: "";
+  height: 2px;
+  width: 350px;
+  left: -10%;
+  bottom: 0;
+  position: absolute;
+  background: white;
+}
+
+.medoc .scroll div .about{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5px;
+  margin-bottom: .8em;
+}
+
+/* Anaranle fanafody atao Rose */
+.medoc div .about p:nth-child(1){
+  color: var(--color6);
+}
+
+
+/* Dose Fanafody */
+.medoc div .about p:nth-child(2){
+  font-weight: 100;
+  font-size: 13px;
+}
+
+/* Impiry no tokony hinana anle fanafody */
+.medoc div .duration{
+  display: flex;
+  align-items: center;
+  color: var(--titrekely);
+}
+
+.medoc div .duration span{
+  margin: 0 8px;
+}
+
+.medoc div .duration span:nth-child(1){
+  margin-left: 0;
+}
+
+/* Fotoana hinana anle fanafody */
+.medoc div .times{
+  font-weight: 0;
+  font-size: 12px;
+  color: var(--color7);
+}
+/**************Docteur**************/
+
+.docteur{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.docteur .propos{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.docteur .propos .img{
+  background: url(../img/doc.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 -5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.docteur .propos .ab{
+  display: flex;
+  flex-direction: column;
+}
+
+.docteur .propos .ab .nom{
+  font-size: 15px;
+}
+
+.docteur .propos .ab .hopital{
+  font-size: 10px;
+  color: var(--color7);
+}
+
+.docteur .faire{
+  font-size: 12px;
+  color: var(--color7);
+  margin-bottom: 2em;
+}
+
+.docteur .dateTime{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.docteur .dateTime div{
+  display: flex;
+  flex-direction: column;
+}
+
+.docteur .dateTime div h3:nth-child(1){
+  color: var(--titrekely);
+  font-size: 12px;
+}
+
+.docteur .dateTime div h3{
+  font-size: 14px;
+  font-weight: 500;
+}
+
