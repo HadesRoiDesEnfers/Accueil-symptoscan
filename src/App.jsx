@@ -2,9 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { FaHeartbeat, FaStream} from "react-icons/fa";
-import { FaCalendar } from "react-icons/fa";
-import { BiGridAlt, BiStats, BiCog, BiLogOut, BiCaretLeft, BiCaretRight } from "react-icons/bi";
+import NavBar from'./components/NavBar/nav.jsx';
+
 
 
 function App() {
@@ -14,21 +13,7 @@ function App() {
       <div className="logo">
         <p>+</p>
       </div>
-      <nav className="nav-menu">  
-        <ul>
-          <li className='burger'><a href="#" ><FaStream/></a></li>
-          <li className='Active'><a href="#"><BiGridAlt/></a></li>
-          <li><a href="#"><BiStats/></a></li>
-          <li><a href="#"><FaHeartbeat/></a></li>
-          <li><a href="#"><FaCalendar/></a></li>
-          <div className="indi"></div>
-        </ul>
-        <div className="ambany">
-          <a href="#"><BiCog/></a>
-          <a href="#"><BiLogOut/></a>
-          {/* <p></p> */}
-        </div>
-      </nav>
+      <NavBar />
       {/* A propos du patient */}
       <div className="card">
         {/* Sary Patient */}

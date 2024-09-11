@@ -1,0 +1,69 @@
+:root{
+    --color1: #1137b1;
+    --color2: #e0f1ff;
+    --color3: #c7fceb;
+    --color4: #6bbaa3;
+    --color5: #5dbfc9;
+    --color6: #e5a4ae;
+    --color7: #2c2b2cac;
+    --titrekely: #6ac1c9;
+    --shadow: #dfe2df;
+    --dimProfile: 45px;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    transition: .3s;
+}
+
+nav{
+    grid-area: nav;
+    background: var(--color3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius: 30px;
+}
+  
+nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 65%;
+}
+  
+nav a{
+    color: #2c2b2c;
+    font-size: 1.2rem;
+}
+  
+nav .ambany{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 25%;
+}
+  
+nav .ambany p{
+    background: url(../assets/img/user.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: var(--dimProfile);
+    height: var(--dimProfile);
+    border-radius: 50%;
+}
+
+nav .Active > a{
+    font-size: 30px;
+}

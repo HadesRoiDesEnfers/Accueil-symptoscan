@@ -40,7 +40,6 @@
   height: 100vh;
 }
 
-
 .logo{
   grid-area: logo;
   display: flex;
@@ -58,47 +57,7 @@
   color: red;
 }
 
-nav{
-  grid-area: nav;
-  background: var(--color3);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 5px;
-  border-radius: 30px;
-}
 
-nav ul{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 65%;
-}
-
-nav a{
-  color: #2c2b2c;
-  font-size: 1.2rem;
-}
-
-nav .ambany{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 25%;
-}
-
-nav .ambany p{
-  background: url(../img/user.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: var(--dimProfile);
-  height: var(--dimProfile);
-  border-radius: 50%;
-}
 
 /*********Carte Patient ****************/
 .card{
@@ -122,7 +81,7 @@ nav .ambany p{
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 1px 0 20px var(--shadow);
-  background: url(../img/user.jpg);
+  background: url(./assets/img/user.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -312,7 +271,7 @@ nav .ambany p{
 }
 
 .docteur .propos .img{
-  background: url(../img/doc.jpg);
+  background: url(./assets/img/doc.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 -5px;
