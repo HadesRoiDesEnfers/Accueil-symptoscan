@@ -9,6 +9,12 @@
   --titrekely: #6ac1c9;
   --shadow: #dfe2df;
   --dimProfile: 45px;
+  --grave: #f88db4;
+  --graveS: #c47592;
+  --pas: #86f3d7;
+  --pasS: #6cc4ae;
+  --moyen: #f6f686;
+  --moyenS: #c3c373;
 }
 
 *{
@@ -23,22 +29,22 @@
 }
 
 #root{
-  /* background: #f2f5f9; */
- display: grid;
+  display: grid;
  grid-template-columns: .01fr .15fr .7fr 1fr 1fr;
  grid-template-rows: .01fr .8fr 1fr .2fr 1fr 1fr 1fr .01fr;
  grid-template-areas: 
   '. . . . .'
-  '. logo card . .'
-  '. nav card . .'
-  '. nav soratr . .'
-  '. nav medoc . .'
-  '. nav medoc . .'
-  '. nav medoc . .'
+  '. logo card mal .'
+  '. nav card mal .'
+  '. nav soratr mal .'
+  '. nav medoc mal .'
+  '. nav medoc mal .'
+  '. nav medoc mal .'
   '. . . . .';
   gap: 5px 15px;
   width: 99vw;
   height: 100vh;
+  padding: 10px;
 }
 
 .logo{
@@ -323,3 +329,105 @@
   font-weight: 500;
 }
 
+/* ****************************************** */
+
+.maladies{
+  grid-area: mal;
+  display: flex;
+  flex-direction: column;
+  width: 880px;
+  padding: 20px 10px;
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.maladies > p{
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.maladies .there{
+  margin-top: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+
+}
+
+.maladies .there div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 10px;
+  width: 15rem;
+  height: 6.5rem;
+  border-radius: 15px;
+}
+
+.maladies .there div .date{
+  color: var(--color7);
+  font-size: .7em;
+  margin-bottom: 10px;
+}
+
+.maladies .there div .nom{
+  font-weight: 500;
+  transform: translateX(7px);
+}
+
+.maladies .there div .statut{
+  color: var(--color7);
+  font-size: .8rem;
+}
+
+.maladies .there .grave{
+  background: var(--grave);
+  box-shadow: -.4em 0 0 var(--graveS);
+}
+
+.maladies .there .moyen{
+  background: var(--moyen);
+  box-shadow: -.4em 0 0 var(--moyenS);
+}
+
+.maladies .there .pas{
+  background: var(--pas);
+  box-shadow: -.4em 0 0 var(--pasS);
+}
+
+/* Rendez vous */
+
+.maladies .rdv{
+  transform: translateY(1.5rem);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.maladies .rdv > p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: var(--color5);
+}
+
+.maladies .rdv .un{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.maladies .rdv .DateTime{
+  color: var(--color7);
+  font-size: .9rem;
+}
+
+.maladies .rdv .date{
+  margin-right: 1rem;
+}
