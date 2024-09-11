@@ -10,9 +10,7 @@ function App() {
 
   return (
     <>
-      <div className="logo">
-        <p>+</p>
-      </div>
+      
       <NavBar />
       {/* A propos du patient */}
       <div className="card">

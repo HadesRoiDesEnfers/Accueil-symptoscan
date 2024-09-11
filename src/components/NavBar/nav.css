@@ -1,7 +1,7 @@
 :root{
     --color1: #1137b1;
     --color2: #e0f1ff;
-    --color3: #c7fceb;
+    --navColor: #c7fceb;
     --color4: #6bbaa3;
     --color5: #5dbfc9;
     --color6: #e5a4ae;
@@ -9,6 +9,7 @@
     --titrekely: #6ac1c9;
     --shadow: #dfe2df;
     --dimProfile: 45px;
+    --dimHovering: 60px;
 }
   
 *{
@@ -24,13 +25,19 @@
 
 nav{
     grid-area: nav;
-    background: var(--color3);
+    background: var(--navColor);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 10px 5px;
     border-radius: 30px;
+    width: 65px;
+    position: relative; 
+}
+
+nav ul li{
+    z-index: 3;
 }
   
 nav ul{
@@ -64,6 +71,24 @@ nav .ambany p{
     border-radius: 50%;
 }
 
+nav .Active{
+    z-index: 3;
+    transform: translateX(40%);
+}
+
 nav .Active > a{
     font-size: 30px;
+}
+
+/******Hovering****/
+.indi{
+    min-width: var(--dimHovering);
+    min-height: var(--dimHovering);
+    background: var(--navColor);
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 14%;
+    left: 30%;
+    /* transform: translateY(-65px); */
 }

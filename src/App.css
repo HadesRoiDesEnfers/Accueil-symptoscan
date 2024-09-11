@@ -23,6 +23,7 @@
 }
 
 #root{
+  /* background: #f2f5f9; */
  display: grid;
  grid-template-columns: .01fr .15fr .7fr 1fr 1fr;
  grid-template-rows: .01fr .8fr 1fr .2fr 1fr 1fr 1fr .01fr;
