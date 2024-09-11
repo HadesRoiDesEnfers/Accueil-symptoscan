@@ -115,17 +115,29 @@ function App() {
         </div>
         <div className="rdv">
           <p>Last appointment</p>
-          <div className='un'>
+          <div className='un soon'>
+            <p className='type'>Tonsillectomy</p>
+            <p className='DateTime'><span className='date'>03 April 2024</span><span className='time'>02:17 PM</span></p>
+          </div>
+          <div className='un morning'>
             <p className='type'>Simple consultation</p>
+            <p className='DateTime'><span className='date'>03 August 2024</span><span className='time'>08:00 AM</span></p>
+          </div>
+          <div className='un soon'>
+            <p className='type'>Vaccine renewals</p>
+            <p className='DateTime'><span className='date'>07 August 2024</span><span className='time'>03:45 PM</span></p>
+          </div>
+          <div className='un morning'>
+            <p className='type'>Blood Pressure Measurement</p>
             <p className='DateTime'><span className='date'>12 August 2024</span><span className='time'>09:15 AM</span></p>
           </div>
-          <div className='un'>
-            <p className='type'>Vaccine renewals</p>
-            <p className='DateTime'><span className='date'>22 July 2024</span><span className='time'>03:45 PM</span></p>
+          <div className='un soon'>
+            <p className='type'>Simple consultation</p>
+            <p className='DateTime'><span className='date'>31 August 2024</span><span className='time'>03:45 PM</span></p>
           </div>
-          <div className='un'>
-            <p className='type'>Blood Pressure Measurement</p>
-            <p className='DateTime'><span className='date'>03 August 2024</span><span className='time'>08:00 AM</span></p>
+          <div className='un morning'>
+            <p className='type'>Dental scaling</p>
+            <p className='DateTime'><span className='date'>09 September 2024</span><span className='time'>11:09 AM</span></p>
           </div>
         </div>
       </div>
