@@ -23,7 +23,7 @@
     transition: .3s;
 }
 
-nav{
+.navT{
     grid-area: nav;
     background: var(--navColor);
     display: flex;
@@ -36,11 +36,11 @@ nav{
     position: relative; 
 }
 
-nav ul li{
+.navT ul li{
     z-index: 3;
 }
   
-nav ul{
+.navT ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,12 +48,12 @@ nav ul{
     height: 65%;
 }
   
-nav a{
+.navT a{
     color: #2c2b2c;
     font-size: 1.2rem;
 }
   
-nav .ambany{
+.navT .ambany{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +61,7 @@ nav .ambany{
     height: 25%;
 }
   
-nav .ambany p{
+.navT .ambany p{
     background: url(../assets/img/user.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,27 +71,38 @@ nav .ambany p{
     border-radius: 50%;
 }
 
-nav .Active{
+.navT .Active{
     z-index: 3;
-    transform: translateX(40%);
+    /* transform: translateX(40%); */
+    border-radius: 50%;
+    min-width: var(--dimHovering);
+    min-height: var(--dimHovering);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--navColor);
+    transform: translateX(10px);
 }
 
-nav .Active > a{
-    font-size: 30px;
+.navT .Active > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 /******Hovering****/
-.indi{
-    min-width: var(--dimHovering);
-    min-height: var(--dimHovering);
+/* .indi{
     background: var(--navColor);
     border-radius: 50%;
     z-index: 1;
     position: absolute;
     top: 14%;
     left: 30%;
-    /* transform: translateY(-65px); */
-}
+    transform: translateY(-65px);
+} */
 
 /* Logo */
 .logo{
